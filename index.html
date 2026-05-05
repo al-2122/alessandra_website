@@ -11,7 +11,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/main.js" defer></script>
@@ -31,9 +31,11 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html" class="active">About</a>
         <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
+        <!-- <a href="publications.html">Publications</a> -->
         <a href="cv.html">CV</a>
-        <a href="blog.html">Notes</a>
+        <!-- <a href="blog.html">Notes</a> -->
+        <a href="beyond-academia.html">Beyond Academia</a>
+        <a href="search.html">Search</a>
       </nav>
     </div>
   </header>
@@ -42,14 +44,15 @@
     <section class="hero section">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Plant & Microbial Sciences</p>
-          <h1>Your Name</h1>
+          <p class="eyebrow">PhD Student</p>
+          <h1>Alessandra Learmount</h1>
           <p class="lead">
-            PhD student working on plant root systems, rhizosphere microbiomes, and resilient agriculture.
+            PhD student at the University of Cambridge funded by the BBSRC & Shuttleworth Scholarship.
           </p>
           <p>
-            I study how roots, microbes, and environment interact, with a focus on quantitative biology,
-            crop resilience, and research that can translate beyond academia.
+            My PhD is a collaboration between the Department of Pathology, the Crop Sciences Centre and IRRI (Philippines). 
+            It explores how to enhance rice yields through harnessing of the beneficial arbuscular mycorrhizal fungi symbiosis.
+            I work with crop breeders to ensure my work remains commercially relevant and can be translated beyond pure academia.
           </p>
 
           <div class="button-row">
@@ -62,22 +65,29 @@
           <p class="panel-label">Current focus</p>
           <h2>Research themes</h2>
           <ul class="clean-list">
-            <li>Root system architecture</li>
-            <li>Rhizosphere microbiome ecology</li>
-            <li>Climate-resilient and underutilized crops</li>
-            <li>Data-driven plant science</li>
+            <li>Arbuscular Mycorrhizal Fungi</li>
+            <li>Transcriptomics & Metagenomics</li>
+            <li>Underutilised Crops</li>
           </ul>
         </aside>
       </div>
+      
     </section>
-
-    <section class="section">
+    <section class="section wider-left">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Overview</p>
-          <h2>What this site contains</h2>
+          <p class="eyebrow">Summary</p>
+          <h2>Current Academic Work</h2>
+          <p>
+            I have recently completed a rotation project on the underutilised crop Eragrostis tef exploring root system architecture and rhizosphere microbiome. This rotation was completed as a collaboration between Niab and the Department of Pathology, University of Cambridge. 
+            It involved a combination of wet lab techniques (root phenotyping, DNA extraction, library prep for Oxford Nanopore metagenomic sequencing) and computational analysis (R, Kraken2 for taxonomic classification, and use of an HPC). The aim was to uncover potential methods to enhance crop yields
+            and reduce lodging in tef, a staple crop for millions of people in Ethiopia and the Horn of Africa. My research set the foundations for future field validation and syncom experiments to determine whether our findings translate into enhanced crop performance.
+            Despite this project coming to an end, I thoroughly enjoyed working on an underutilised crop and hope to continue engaging in related research. My current project in the Paszkowski lab in Cambridge focuses on rice as the model crop and has similar ambitions to enhance crop yields whilst reducing
+            reliance on synthetic fertilisers through harnessing of the arbuscular mycorrhizal fungi symbiosis. 
+          </p>
         </div>
 
+            <section class="section">
         <div class="card-grid">
           <article class="card">
             <h3>Research</h3>
@@ -87,55 +97,33 @@
 
           <article class="card">
             <h3>Publications</h3>
-            <p>Papers, preprints, posters, talks, and selected outputs, with a simple client-side search.</p>
-            <a href="publications.html" class="text-link">View publications</a>
+            <p>Papers, preprints, posters, and talks.</p>
+            <!-- <a href="publications.html" class="text-link">View publications</a> -->
           </article>
 
           <article class="card">
-            <h3>CV & notes</h3>
-            <p>Academic milestones, teaching, awards, and short writing on methods, science, and ideas.</p>
+            <h3>CV</h3>
+            <p>Academic milestones, work experiences, teaching and awards.</p>
             <a href="cv.html" class="text-link">Open CV</a>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <section class="section accent-section">
-      <div class="container split-grid">
-        <div>
-          <p class="eyebrow">Positioning</p>
-          <h2>Built for academia and beyond</h2>
-          <p>
-            The structure of this site is designed to work equally well for academic audiences,
-            collaborators, and future industry-facing opportunities in biotech, sustainability, and consulting.
-          </p>
-        </div>
-        <div class="mini-card">
-          <p class="mini-title">Suggested external links</p>
-          <ul class="clean-list">
-            <li>Google Scholar</li>
-            <li>ORCID</li>
-            <li>GitHub</li>
-            <li>LinkedIn</li>
-          </ul>
         </div>
       </div>
     </section>
-  </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
         <h2>Contact</h2>
-        <p>your.email@university.edu</p>
-        <p class="meta">Cambridge / London · Plant & Microbial Sciences</p>
+        <p>al2122@cam.ac.uk</p>
+        <p class="meta">Cambridge | London </p>
       </div>
 
       <nav class="footer-links" aria-label="External links">
-        <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-        <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer">ORCID</a>
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <!-- <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a> -->
+        <!-- <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer">ORCID</a> -->
+        <a href="https://github.com/al-2122" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/alessandralearmount/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </nav>
     </div>
   </footer>

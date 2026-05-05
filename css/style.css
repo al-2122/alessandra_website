@@ -20,7 +20,7 @@
   --max-width: 1120px;
   --narrow-width: 780px;
 
-  --font-heading: "Cormorant Garamond", serif;
+  --font-heading: "Inter", sans-serif;
   --font-body: "Inter", sans-serif;
 
   --transition: 220ms ease;
@@ -107,6 +107,10 @@ input {
 .container {
   width: min(100% - 2rem, var(--max-width));
   margin-inline: auto;
+}
+
+.wider-left p {
+  max-width: none;
 }
 
 .narrow {
