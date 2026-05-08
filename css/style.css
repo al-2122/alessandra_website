@@ -461,6 +461,43 @@ input {
   align-items: flex-start;
 }
 
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer-nav h2,
+.footer-map h2 {
+  margin-bottom: var(--space-3);
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: var(--space-4);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -553,4 +590,122 @@ input {
   .site-nav {
     top: 72px;
   }
+}
+
+.interest-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-bg, #fff);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 1rem 0;
+  margin-top: 2rem; /* increase this to push it lower */
+}
+
+.interest-tabs {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-left: 10rem; /* increase to push further right */
+}
+
+.interest-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.interest-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.12);
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--color-text, #222);
+  background: var(--color-surface, #f9f9f9);
+  transition: all 180ms ease;
+}
+
+.interest-tab:hover {
+  background: var(--color-primary, #01696f);
+  color: #fff;
+  border-color: transparent;
+}
+
+.interest-tab.active {
+  background: var(--color-primary, #01696f);
+  color: #fff;
+  border-color: transparent;
+}
+
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  cursor: default;
+}
+
+.pin-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-primary, #01696f);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.pin-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  background: white;
+  color: #222;
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 600px) {
+  .pin-label {
+    display: none;
+  }
+  .pin-dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* DEFAULT: hide the tooltip */
+.pin-tooltip {
+  display: none;  /* ← this must be present and not overridden */
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1c1b19;
+  color: #cdccca;
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+  width: 220px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+  pointer-events: none;
+  z-index: 100;
+  white-space: normal;
+}
+
+/* SHOW only on hover/focus/tap */
+.map-pin:hover .pin-tooltip,
+.map-pin:focus-within .pin-tooltip,
+.map-pin.active .pin-tooltip {
+  display: block;
 }
