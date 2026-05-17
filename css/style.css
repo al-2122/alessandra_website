@@ -569,7 +569,9 @@ input {
     position: absolute;
     top: 78px;
     right: 1rem;
-    min-width: 220px;
+    left: 1rem;
+    min-width: unset;
+    width: auto;
     padding: 1rem;
     border-radius: 14px;
     border: 1px solid var(--border);
@@ -577,22 +579,34 @@ input {
     box-shadow: var(--shadow-sm);
     display: none;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+  }
+
+  .site-nav a {
+    width: 100%;
+    padding: 0.75rem 0;
   }
 
   .site-nav.open {
     display: flex;
   }
 
-  /* On narrower screens, reduce the left padding on the interest tabs
-     so the scrollable tab row starts closer to the left edge. Also
-     ensure the sticky interest bar sits below the header. */
   .interest-tabs {
     padding-left: 1rem;
   }
 
   .interest-nav {
     top: 78px;
+  }
+
+  .fieldwork-gallery {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .fieldwork-figure {
+    min-width: 260px;
+    width: calc(50% - 0.5rem);
   }
 }
 
@@ -611,15 +625,42 @@ input {
 
   .header-inner {
     min-height: 72px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .site-logo {
+    font-size: 1.4rem;
   }
 
   .site-nav {
     top: 72px;
+    right: 0.75rem;
+    left: 0.75rem;
+    width: calc(100% - 1.5rem);
   }
 
-  /* Slightly tighter padding on very small screens */
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .theme-card {
+    width: 100%;
+  }
+
+  .fieldwork-gallery {
+    flex-direction: column;
+  }
+
+  .fieldwork-figure {
+    width: 100%;
+    min-width: auto;
+  }
+
   .interest-tabs {
     padding-left: 0.5rem;
+    gap: 0.5rem;
   }
 
   .interest-nav {
