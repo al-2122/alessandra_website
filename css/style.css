@@ -24,6 +24,21 @@
   --font-body: "Inter", sans-serif;
 
   --transition: 220ms ease;
+
+  /* Backwards-compatible aliases for components using different variable names */
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-text: var(--text);
+  --color-primary: var(--accent);
+  --color-primary-highlight: var(--accent-soft);
+  --color-border: var(--border);
+  --text-sm: 0.875rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-10: 2.5rem;
 }
 
 *,
