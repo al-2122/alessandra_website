@@ -201,6 +201,7 @@ input {
   display: flex;
   align-items: center;
   gap: 1.3rem;
+  z-index: 220;
 }
 
 .site-nav a {
@@ -659,14 +660,20 @@ input {
     gap: 1.5rem;
   }
 
-  .hero-photo {
+  .hero-copy {
     width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
+    order: 1;
   }
 
   .hero-photo-panel {
     width: 100%;
+    order: 2;
+  }
+
+  .hero-photo {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
   }
 
   .button-row {
@@ -694,6 +701,32 @@ input {
 
   .interest-nav {
     top: 72px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-nav {
+    z-index: 220;
+  }
+
+  .nav-toggle {
+    position: relative;
+    z-index: 230;
+  }
+
+  .map-pin {
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+  .map-pin:active .pin-tooltip,
+  .map-pin:focus-within .pin-tooltip {
+    display: block;
+  }
+
+  .map-pin:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
   }
 }
 
