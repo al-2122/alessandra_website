@@ -560,7 +560,7 @@ input {
   .hero-grid,
   .split-grid,
   .card-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .hero-grid {
@@ -569,6 +569,13 @@ input {
 
   .hero-copy {
     padding-right: 0;
+    order: 1;
+  }
+
+  .hero-photo-panel {
+    order: 2;
+    width: 100%;
+    max-width: none;
   }
 
   .nav-toggle {
@@ -599,6 +606,7 @@ input {
 
   .site-nav.open {
     display: flex;
+    z-index: 9999;
   }
 
   .interest-tabs {
@@ -853,6 +861,13 @@ input {
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 3rem;
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 .hero-photo {
